@@ -8,13 +8,12 @@
 
 <script>
   export default {
-    name:'modal',
-    data(){
-      return{
-        idName:'modal'
+    name: 'AppModal',
+    data() {
+      return {
+        idName: 'modal',
       }
     },
-
   }
 </script>
 

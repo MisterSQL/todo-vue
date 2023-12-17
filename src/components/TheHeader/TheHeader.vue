@@ -1,31 +1,26 @@
 <template>
   <header class="header">
     <div class="header__container container">
-      <appLogo/>
-      <buttonVue
-          @customEvent="openModal"
+      <AppLogo />
+      <AppButton
           class="header__button"
-          :label="label"/>
+          label="Создать"
+          @click="openModal()"
+      />
     </div>
-
   </header>
 </template>
 
 <script>
-  import buttonVue from "@/components/ui/Button.vue";
-  import appLogo from "@/components/header/AppLogo.vue";
-  import modal from "@/components/modal/Modal.vue";
+  import AppButton from "@/components/ui/AppButton.vue";
+  import AppLogo from "@/components/AppLogo.vue";
+  import AppModal from "@/components/AppModal.vue";
 
   export default {
     components:{
-      buttonVue,
-      appLogo,
-      modal,
-    },
-    data() {
-      return {
-        label:"Создать",
-      }
+      AppButton,
+      AppLogo,
+      AppModal,
     },
     methods: {
       openModal() {
@@ -40,8 +35,6 @@
 
 <style scoped>
   @import "@/assets/style/variables.css";
-  @import "@/assets/style/global.css";
-
 
   .header__button {
     border: 1px solid white;

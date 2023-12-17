@@ -1,3 +1,4 @@
+/* TODO: переименовать названия, белый - это не праймари */
 :root {
     --color-primary: #FFFFFF;
     --color-secondary: #000000;
@@ -7,11 +8,11 @@
 
     --color-warning: #F4C959;
 
-    --error: #ff1616;
-    --color-dark-red: #b00000;
+    --color-error: #ff1616;
+    --color-error-dark: #b00000;
 
-    --success: #008180;
-    --color-green-dark: #026463;
+    --color-success: #008180;
+    --color-success-dark: #026463;
 
-    --font-family: "Manrope", sans-serif ;
+    --font-family: 'Manrope', sans-serif;
 }

@@ -1,18 +1,12 @@
 <template>
   <div class="icon">
-    TO<span :class="textColor">DO</span>S
+    TO<span class="text-color-error">DO</span>S
   </div>
 </template>
+
 <script>
-
-
 export default {
-  name:'logo',
-  data() {
-    return {
-      textColor: 'text-color-error',
-    }
-  },
+  name:'AppLogo',
 }
 </script>
 
