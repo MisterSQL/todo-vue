@@ -1,19 +1,20 @@
 <template>
   <div class="task">
-      <p class="task-name">Задачи  дачи на сегодня ка на сегодня какая-то очень для</p>
-      <buttonVue
-          class="button-edit"
-          v-html="srcEdit"
-      />
+    <p class="task-name">Задачи  дачи на сегодня ка на сегодня какая-то очень для</p>
+    <AppButton
+        class="button-edit"
+        v-html="srcEdit"
+    />
   </div>
 </template>
 
 <script>
-  import buttonVue from "@/components/ui/Button.vue";
+  import AppButton from "@/components/ui/AppButton.vue";
+
   export default {
     name:'task',
-    props:{
-
+    components:{
+      AppButton
     },
     data(){
       return{
@@ -23,36 +24,32 @@
             '        </svg>',
       }
     },
-
-    components:{
-      buttonVue
-    }
   }
 </script>
 
 <style scoped>
-  .task{
+  .task {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--color-primary);
 
   }
-  .task,.button-edit{
+  .task,
+  .button-edit {
     border-bottom-right-radius: 16px;
     border-top-right-radius: 16px;
     height: 88px;
   }
-  .button-edit{
+  .button-edit {
     width: 88px;
     border-color: var(--color-warning);
 
   }
-  .task-name{
+  .task-name {
     padding-inline: 15px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
-
 </style>
