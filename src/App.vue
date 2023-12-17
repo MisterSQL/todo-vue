@@ -1,28 +1,34 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" @click="closeModal">
+    <modal/>
+    <header_todo/>
+    <content_todo/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import header_todo from '@/components/header/Header.vue'
+import content_todo from "@/components/content/Content.vue";
+import modal from "@/components/modal/Modal.vue";
 
 export default {
-  name: 'App',
+  name: 'app',
   components: {
-    HelloWorld
+    header_todo,
+    content_todo,
+    modal,
+  },
+
+  methods:{
+    closeModal(event){
+      const idModal = document.getElementById(modal.data().idName);
+      const element = event.target;
+      if(element.classList.contains('modal')) {
+        idModal.classList.add('hidden');
+      }
+    }
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
